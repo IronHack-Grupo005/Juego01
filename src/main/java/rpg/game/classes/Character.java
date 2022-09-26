@@ -25,7 +25,9 @@ public abstract class Character {
         this.setName(rellenaConCaracteres((int) ((Math.random() * (25 - 1)) + 1)));
         this.setHp((int) ((Math.random() * (50 - 10)) + 10));
         this.setAlive(true);
+
         this.id ++ ;
+
         this.setIdentificador( (int) this.id);
         System.out.println("Creado algo con id: " + this.id);
     }
@@ -39,7 +41,7 @@ public abstract class Character {
             return "KO";
     }
 
-    public void hit(int d) { // Devuelve el daño que hace
+    public void hit(int d) {
         this.hp -= d;
         if(this.getHp() <= 0)
             this.setAlive(false);

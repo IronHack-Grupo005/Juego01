@@ -29,16 +29,15 @@ public class Warrior extends Character implements Attacker {
         this.strength = strength;
     }
 
-    public int attack() {
-        int ataque=0;
+    public boolean attack(Character c) {
         this.setStamina(this.getStamina()-5);
         if (this.getStamina() >= 5) {
-            ataque = this.getStrength(); // Heavy Attack
+            c.hit(this.getStrength()); // Heavy Attack
         } else {
-            ataque = (int) (this.getStrength() / 2); // Weak Attack
+            c.hit((int) (this.getStrength() / 2)); // Weak Attack
             this.setStamina(this.getStamina() + 1);
         }
-        return ataque;
+        return true;
     }
 
 }

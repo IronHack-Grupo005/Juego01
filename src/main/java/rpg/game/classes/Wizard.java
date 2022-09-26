@@ -30,16 +30,15 @@ public class Wizard extends Character implements Attacker {
     }
 
 
-    public int attack() {
-        int ataque=0;
+    public boolean attack(Character c) {
         this.setMana(this.getMana()-5);
         if (this.getMana() >= 5) {
-            ataque=this.getIntelligence(); // Heavy Attack
+            c.hit(this.getIntelligence()); // Heavy Attack
         } else {
-            ataque=(int) (2); // Weak Attack
+            c.hit((int) (2)); // Weak Attack
             this.setMana(this.getMana() + 1);
         }
-        return ataque;
+        return true;
     }
 
 }

@@ -64,7 +64,7 @@ public class Battle {
                 Warrior war1 = (Warrior) jugador1.dameCaracter(this.getFighterONE());
                 // TODO: Peta
 
-                System.out.println("ID: " + this.getFighterTWO());
+                System.out.println("ID a ser atacado : " + this.getFighterTWO() + " de: " + this.getFighterONE() + " por Warrior");
 
                 //war1.attack(jugador2.dameCaracter(this.getFighterTWO()));
 
@@ -72,6 +72,8 @@ public class Battle {
 
             } else if (jugador1.dameCaracter(this.getFighterONE()).dameType() == "Wizard"){
                 Wizard wiz1 = (Wizard) jugador1.dameCaracter(this.getFighterONE());
+                System.out.println("ID a ser atacado : " + this.getFighterTWO() + " de: " + this.getFighterONE() + " por Wizard");
+
                 //wiz1.attack(jugador2.dameCaracter(this.getFighterTWO()));
                 System.out.println("Lucha Wizard " + wiz1.getName() + " con hp: " + wiz1.getHp());
             }
