@@ -1,2 +1,6 @@
-package rpg.game.interfces;public interface Attacker {
+package rpg.game.interfces;
+
+public interface Attacker {
+
+
 }
