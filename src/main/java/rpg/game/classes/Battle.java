@@ -50,8 +50,6 @@ public class Battle {
 
             this.setFighterONE( teclita );
 
-            // TODO: Aleatorio
-
             System.out.println("El ID es: " + jugador2.getFirstAlive());
 
             this.setFighterTWO(jugador2.getFirstAlive());
@@ -59,14 +57,18 @@ public class Battle {
             // TODO: Porque no va la linea de abajo
             //(Warrior)jugador1.dameCaracter(this.getFighterONE()).attack(jugador2.dameCaracter(this.getFighterTWO()));
 
-
             if (jugador1.dameCaracter(this.getFighterONE()).dameType() == "Warrior") {
                 Warrior war1 = (Warrior) jugador1.dameCaracter(this.getFighterONE());
-                // TODO: Peta
 
                 System.out.println("ID a ser atacado : " + this.getFighterTWO() + " de: " + this.getFighterONE() + " por Warrior");
 
-                //war1.attack(jugador2.dameCaracter(this.getFighterTWO()));
+                // TODO: Peta
+
+
+                System.out.println( "Nombre: " + jugador2.dameCaracter(1).getName() );
+
+                war1.attack(jugador2.dameCaracter(this.getFighterTWO()));
+
 
                 System.out.println("Lucha Warrior " + war1.getName() + " con hp: " + war1.getHp());
 
@@ -75,6 +77,7 @@ public class Battle {
                 System.out.println("ID a ser atacado : " + this.getFighterTWO() + " de: " + this.getFighterONE() + " por Wizard");
 
                 //wiz1.attack(jugador2.dameCaracter(this.getFighterTWO()));
+
                 System.out.println("Lucha Wizard " + wiz1.getName() + " con hp: " + wiz1.getHp());
             }
 

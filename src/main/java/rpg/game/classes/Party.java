@@ -10,8 +10,12 @@ public class Party {
 
     public Party() { }
 
-    public Character dameCaracter(int i){
-        return this.characters.get(i-1);
+    public Character dameCaracter(int identificador){
+        System.out.println("\n\n\n\n\n\n\n\n\n");
+        System.out.println("#################");
+        System.out.println("Estamos aqui con identificador: " + identificador);
+        return (Character) this.characters.get(identificador-1);
+        // TODO: Algo hay aqui ?
     }
 
     public boolean escojeGuerrero(String jugador){

@@ -29,7 +29,7 @@ public abstract class Character {
         this.id ++ ;
 
         this.setIdentificador( (int) this.id);
-        System.out.println("Creado algo con id: " + this.id);
+        //System.out.println("Creado algo con id: " + this.id);
     }
 
     public String dameType(){
