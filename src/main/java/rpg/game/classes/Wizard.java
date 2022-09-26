@@ -1,5 +1,5 @@
 package rpg.game.classes;
-
+import rpg.game.interfces.Attacker;
 
 public class Wizard extends Character implements Attacker {
 
@@ -29,15 +29,18 @@ public class Wizard extends Character implements Attacker {
         this.intelligence = intelligence;
     }
 
-    public boolean attack(Character c) {
+
+    public int attack() {
+        int ataque=0;
         this.setMana(this.getMana()-5);
         if (this.getMana() >= 5) {
-            c.hit(this.getIntelligence()); // Heavy Attack
+            ataque=this.getIntelligence(); // Heavy Attack
         } else {
-            c.hit((int) (2)); // Weak Attack
+            ataque=(int) (2); // Weak Attack
             this.setMana(this.getMana() + 1);
         }
-        return true;
+        return ataque;
     }
+
 }
 

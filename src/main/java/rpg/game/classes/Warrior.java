@@ -1,5 +1,5 @@
 package rpg.game.classes;
-
+import rpg.game.interfces.Attacker;
 
 public class Warrior extends Character implements Attacker {
 
@@ -29,15 +29,16 @@ public class Warrior extends Character implements Attacker {
         this.strength = strength;
     }
 
-    public boolean attack(Character c) {
+    public int attack() {
+        int ataque=0;
         this.setStamina(this.getStamina()-5);
         if (this.getStamina() >= 5) {
-            c.hit(this.getStrength()); // Heavy Attack
+            ataque = this.getStrength(); // Heavy Attack
         } else {
-            c.hit((int) (this.getStrength() / 2)); // Weak Attack
+            ataque = (int) (this.getStrength() / 2); // Weak Attack
             this.setStamina(this.getStamina() + 1);
         }
-        return true;
+        return ataque;
     }
 
 }

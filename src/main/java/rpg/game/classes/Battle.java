@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Battle {
 
-    private ArrayList<Party> guerra = new ArrayList<Party>(2);
+    //private ArrayList<Party> guerra = new ArrayList<Party>(2);
 
     private Party jugador1 = new Party();
     private Party jugador2 = new Party();
@@ -66,13 +66,13 @@ public class Battle {
 
                 System.out.println("ID: " + this.getFighterTWO());
 
-                war1.attack(jugador2.dameCaracter(this.getFighterTWO()));
+                //war1.attack(jugador2.dameCaracter(this.getFighterTWO()));
 
                 System.out.println("Lucha Warrior " + war1.getName() + " con hp: " + war1.getHp());
 
             } else if (jugador1.dameCaracter(this.getFighterONE()).dameType() == "Wizard"){
                 Wizard wiz1 = (Wizard) jugador1.dameCaracter(this.getFighterONE());
-                wiz1.attack(jugador2.dameCaracter(this.getFighterTWO()));
+                //wiz1.attack(jugador2.dameCaracter(this.getFighterTWO()));
                 System.out.println("Lucha Wizard " + wiz1.getName() + " con hp: " + wiz1.getHp());
             }
 

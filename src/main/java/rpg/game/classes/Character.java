@@ -39,14 +39,10 @@ public abstract class Character {
             return "KO";
     }
 
-    // TODO: Devuelve daño
-    public int hit(int d) { // Devuelve el daño que hace
+    public void hit(int d) { // Devuelve el daño que hace
         this.hp -= d;
         if(this.getHp() <= 0)
             this.setAlive(false);
-
-        // TODO: Develver daño
-        return 1;
     }
 
     public static long getId() {
