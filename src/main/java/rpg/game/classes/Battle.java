@@ -64,11 +64,11 @@ public class Battle {
 
                 // TODO: Peta
 
+                System.out.println("EL ident guardado del jugador 2 es: " + this.getFighterTWO());
 
-                System.out.println( "Nombre: " + jugador2.dameCaracter(1).getName() );
+                System.out.println( "El Nombre de quien va ha atacar: " + war1.getName() );
 
-                war1.attack(jugador2.dameCaracter(this.getFighterTWO()));
-
+                //war1.attack(jugador2.dameCaracter(this.getFighterTWO()));
 
                 System.out.println("Lucha Warrior " + war1.getName() + " con hp: " + war1.getHp());
 

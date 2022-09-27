@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class Party {
 
-    private ArrayList<Character> characters = new ArrayList<Character>(10);
+    final int ARRAY_SIZE = 2;
+    private ArrayList<Character> characters = new ArrayList<Character>(ARRAY_SIZE);
     private Scanner key = new Scanner(System.in);
 
     public Party() { }
@@ -14,7 +15,7 @@ public class Party {
         System.out.println("\n\n\n\n\n\n\n\n\n");
         System.out.println("#################");
         System.out.println("Estamos aqui con identificador: " + identificador);
-        return (Character) this.characters.get(identificador-1);
+        return (Character) this.characters.get(identificador);
         // TODO: Algo hay aqui ?
     }
 
@@ -78,7 +79,7 @@ public class Party {
     }
 
     public boolean isFull (){
-        if(this.characters.size() == 10)
+        if(this.characters.size() == ARRAY_SIZE)
             return true;
         return false;
     }
