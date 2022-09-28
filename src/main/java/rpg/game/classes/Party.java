@@ -8,15 +8,9 @@ public class Party {
     final int ARRAY_SIZE = 2;
     private ArrayList<Character> characters = new ArrayList<Character>(ARRAY_SIZE);
     private Scanner key = new Scanner(System.in);
-    private long mineId = 0;
-
-    public Party() { this.mineId += 1; }
 
     public Character dameCaracter(int identificador){
-         System.out.println("\n\n");
-         System.out.println("dameCaracter: " + identificador);
-        return (Character) this.characters.get(identificador);
-        // TODO: Algo hay aqui ?
+        return this.characters.get(identificador);
     }
 
     public boolean escojeGuerrero(String jugador){
@@ -73,7 +67,8 @@ public class Party {
         int id = 0 ;
         for( Character e: this.characters){
             if(e.isAlive()){
-                id = e.getIdentificador();
+                // TODO: He quitado identificador y hay que poner id
+                id = (int) e.getId();
                 return id;
 
             }
@@ -95,13 +90,5 @@ public class Party {
     public boolean addWizard (){
         characters.add(new Wizard());
         return true;
-    }
-
-    public long getMineId() {
-        return mineId;
-    }
-
-    public void setMineId(long mineId) {
-        this.mineId = mineId;
     }
 }

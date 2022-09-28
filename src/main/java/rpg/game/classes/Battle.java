@@ -54,36 +54,25 @@ public class Battle {
 
             this.setFighterTWO(jugador2.getFirstAlive() - 1);
 
-            // TODO: Porque no va la linea de abajo
-            //(Warrior)jugador1.dameCaracter(this.getFighterONE()).attack(jugador2.dameCaracter(this.getFighterTWO()));
-
             if (jugador1.dameCaracter(this.getFighterONE()).dameType() == "Warrior") {
 
-                System.out.println("ID a ser atacado : " + this.getFighterTWO() + " de: " + this.getFighterONE() + " por Warrior");
+                Warrior war = (Warrior) jugador1.dameCaracter(this.getFighterONE());
+                Character mad = jugador2.dameCaracter(this.getFighterTWO());
 
-                Warrior war1 = (Warrior) jugador1.dameCaracter(this.getFighterONE());
-                Warrior war2 = (Warrior) jugador1.dameCaracter(this.getFighterTWO());
+                System.out.println( "El " + war.dameType() + " de quien va ha atacar: " + war.getName() );
+                System.out.println( "El " + mad.dameType() + " de quien va ser atacado: " + mad.getName() );
 
-                // TODO: Peta
-
-                //System.out.println("EL ident guardado del jugador 2 es: " + this.getFighterTWO());
-
-                System.out.println( "El Nombre de quien va ha atacar: " + war1.getName() );
-                System.out.println( "El Nombre de quien va ser atacado: " + war2.getName() );
-
-                war1.attack( jugador2.dameCaracter( this.getFighterTWO()) );
-
-                //System.out.println("Lucha Warrior " + war1.getName() + " con hp: " + war1.getHp());
+                war.attack( jugador2.dameCaracter( this.getFighterTWO()) );
 
             } else if (jugador1.dameCaracter(this.getFighterONE()).dameType() == "Wizard"){
-                Wizard wiz1 = (Wizard) jugador1.dameCaracter(this.getFighterONE());
+                Wizard wiz = (Wizard) jugador1.dameCaracter(this.getFighterONE());
                 Character mad = jugador1.dameCaracter(this.getFighterONE());
-                System.out.println("ID a ser atacado : " + this.getFighterTWO() + " de: " + this.getFighterONE() + " por Wizard");
+                // TODO: mas lio con clases
+                System.out.println( "El " + wiz.dameType() + " de quien va ha atacar: " + wiz.getName() );
+                System.out.println( "El " + mad.dameType() + " de quien va ser atacado: " + mad.getName() );
 
-                wiz1.attack(jugador2.dameCaracter(this.getFighterTWO()));
-
-                System.out.println("Lucha Wizard " + wiz1.getName() + " con hp: " + wiz1.getHp());
-            }
+                wiz.attack(jugador2.dameCaracter(this.getFighterTWO()));
+           }
 
             try {
                 Thread.sleep(1500);
