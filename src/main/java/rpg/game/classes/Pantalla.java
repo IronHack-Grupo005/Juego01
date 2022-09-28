@@ -45,7 +45,7 @@ public class Pantalla {
     }
 
     public void menuTemporal () {
-        System.out.println("\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n");
         System.out.println("#################");
         System.out.println("Centrate! que tu lo consigues...");
         System.out.println("Dala al enter");
@@ -54,46 +54,46 @@ public class Pantalla {
 
 
     public void menuDespedida () {
-        System.out.println("\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n");
         System.out.println("#####################");
         System.out.println("Be the peace with you");
         System.out.println("#####################");
     }
 
     public void menuCreadoEqp1 () {
-        System.out.println("\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n");
         System.out.println("#################");
         System.out.println("Se ha creado tu equipo\ncreo el mio mucho mas rapido que tu\ndale al enter, porfa!");
         String tecla = this.key.nextLine();
     }
 
     public void menuCreadoEqp2 () {
-        System.out.println("\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n");
         System.out.println("#################");
-        System.out.println("Ves! mucho mas parido, ya tengo mi equipo\ndale al enter, para jugar!");
+        System.out.println("Ya tengo mi equipo\ndale al enter, para jugar!");
         String tecla = this.key.nextLine();
     }
 
     public int menuEscoje (Party e) {
-        System.out.println("\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n");
         System.out.println("#################");
         System.out.println("Escoje jugador");
         e.getVivos();
 
         System.out.println("#################");
-        System.out.println("Su numero");
+        System.out.println("Espero su numero de jugador:");
         int tecla = this.key.nextInt();
         return tecla;
     }
 
     public void menuGanoMiguel () {
-        System.out.println("\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n");
         System.out.println("#################");
         System.out.println("Gano Miguel !");
     }
 
     public void menuGanoPC () {
-        System.out.println("\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n");
         System.out.println("#################");
         System.out.println("Gano el maldito ordenador !");
     }

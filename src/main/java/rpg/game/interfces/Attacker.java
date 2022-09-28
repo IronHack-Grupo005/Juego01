@@ -1,6 +1,8 @@
 package rpg.game.interfces;
 
+import rpg.game.classes.Character;
+
 public interface Attacker {
-    public int attack();
+    public boolean attack(Character c);
 
 }

@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class TestMiguel {
+import org.junit.jupiter.api.BeforeEach;
+
+public class TestMiguel {
+
+
 }

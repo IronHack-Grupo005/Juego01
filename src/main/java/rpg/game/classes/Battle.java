@@ -28,8 +28,8 @@ public class Battle {
             }
         }while(3 != accion);
         */
-        menu.menuInicial();
 
+        menu.menuInicial();
 
         while (!jugador1.isFull()) {
             jugador1.escojeGuerrero("Miguel");
@@ -48,35 +48,39 @@ public class Battle {
             int teclita = menu.menuEscoje(jugador1);
             System.out.println("Ha pulsado: " + teclita);
 
-            this.setFighterONE( teclita );
+            this.setFighterONE( teclita - 1 );
 
-            System.out.println("El ID es: " + jugador2.getFirstAlive());
+            System.out.println("El ID del primer vivo es: " + jugador2.getFirstAlive());
 
-            this.setFighterTWO(jugador2.getFirstAlive());
+            this.setFighterTWO(jugador2.getFirstAlive() - 1);
 
             // TODO: Porque no va la linea de abajo
             //(Warrior)jugador1.dameCaracter(this.getFighterONE()).attack(jugador2.dameCaracter(this.getFighterTWO()));
 
             if (jugador1.dameCaracter(this.getFighterONE()).dameType() == "Warrior") {
-                Warrior war1 = (Warrior) jugador1.dameCaracter(this.getFighterONE());
 
                 System.out.println("ID a ser atacado : " + this.getFighterTWO() + " de: " + this.getFighterONE() + " por Warrior");
 
+                Warrior war1 = (Warrior) jugador1.dameCaracter(this.getFighterONE());
+                Warrior war2 = (Warrior) jugador1.dameCaracter(this.getFighterTWO());
+
                 // TODO: Peta
 
-                System.out.println("EL ident guardado del jugador 2 es: " + this.getFighterTWO());
+                //System.out.println("EL ident guardado del jugador 2 es: " + this.getFighterTWO());
 
                 System.out.println( "El Nombre de quien va ha atacar: " + war1.getName() );
+                System.out.println( "El Nombre de quien va ser atacado: " + war2.getName() );
 
-                //war1.attack(jugador2.dameCaracter(this.getFighterTWO()));
+                war1.attack( jugador2.dameCaracter( this.getFighterTWO()) );
 
-                System.out.println("Lucha Warrior " + war1.getName() + " con hp: " + war1.getHp());
+                //System.out.println("Lucha Warrior " + war1.getName() + " con hp: " + war1.getHp());
 
             } else if (jugador1.dameCaracter(this.getFighterONE()).dameType() == "Wizard"){
                 Wizard wiz1 = (Wizard) jugador1.dameCaracter(this.getFighterONE());
+                Character mad = jugador1.dameCaracter(this.getFighterONE());
                 System.out.println("ID a ser atacado : " + this.getFighterTWO() + " de: " + this.getFighterONE() + " por Wizard");
 
-                //wiz1.attack(jugador2.dameCaracter(this.getFighterTWO()));
+                wiz1.attack(jugador2.dameCaracter(this.getFighterTWO()));
 
                 System.out.println("Lucha Wizard " + wiz1.getName() + " con hp: " + wiz1.getHp());
             }

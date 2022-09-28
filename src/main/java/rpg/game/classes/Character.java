@@ -8,7 +8,6 @@ public abstract class Character {
 
     private static long id = 0;
     private int identificador ;
-
     private String name;
     private int hp;
     private boolean isAlive;
@@ -26,10 +25,12 @@ public abstract class Character {
         this.setHp((int) ((Math.random() * (50 - 10)) + 10));
         this.setAlive(true);
 
-        this.id ++ ;
+        this.id += 1 ;
 
         this.setIdentificador( (int) this.id);
-        //System.out.println("Creado algo con id: " + this.id);
+        System.out.println("Creado en constructor de Character con id: " + this.id);
+
+        //TODO: Some IDs here
     }
 
     public String dameType(){

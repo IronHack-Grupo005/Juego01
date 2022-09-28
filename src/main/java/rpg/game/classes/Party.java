@@ -8,20 +8,20 @@ public class Party {
     final int ARRAY_SIZE = 2;
     private ArrayList<Character> characters = new ArrayList<Character>(ARRAY_SIZE);
     private Scanner key = new Scanner(System.in);
+    private long mineId = 0;
 
-    public Party() { }
+    public Party() { this.mineId += 1; }
 
     public Character dameCaracter(int identificador){
-        System.out.println("\n\n\n\n\n\n\n\n\n");
-        System.out.println("#################");
-        System.out.println("Estamos aqui con identificador: " + identificador);
+         System.out.println("\n\n");
+         System.out.println("dameCaracter: " + identificador);
         return (Character) this.characters.get(identificador);
         // TODO: Algo hay aqui ?
     }
 
     public boolean escojeGuerrero(String jugador){
         if(jugador == "Miguel") {
-            System.out.println(jugador + " Escoje 1 para warrior 2 para mago!");
+            System.out.println(jugador + " Escoje 1 para Warrior 2 para Wizard:");
             String tecla = this.key.nextLine();
 
             if(tecla.compareTo("1") == 0){
@@ -36,10 +36,13 @@ public class Party {
             }
         } else {
             // Si soy el ordenador, escopjo aleatorio Wizards or Warriors
-            if ((int) ((Math.random() * (50 - 10)) + 10) / 2 == 0)
+            if ((int) ((Math.random() * (50 - 10)) + 10) / 2 == 0) {
+                System.out.println("He escogido un Warrior");
                 this.addWarrior();
-            else
+            } else {
+                System.out.println("He escogido un Mago");
                 this.addWizard();
+            }
         }
 
 
@@ -94,4 +97,11 @@ public class Party {
         return true;
     }
 
+    public long getMineId() {
+        return mineId;
+    }
+
+    public void setMineId(long mineId) {
+        this.mineId = mineId;
+    }
 }
