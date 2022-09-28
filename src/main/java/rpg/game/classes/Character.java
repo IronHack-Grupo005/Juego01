@@ -3,22 +3,11 @@ package rpg.game.classes;
 import java.util.ArrayList;
 
 public abstract class Character {
-
     ArrayList<String> nombres = new ArrayList<String>(20);
-
     private static long id = 0;
-    //private int identificador ;
     private String name;
     private int hp;
     private boolean isAlive;
-
-    //public int getIdentificador() {
-        //return identificador;
-    //}
-
-    //public void setIdentificador(int identificador) {
-   //     this.identificador = identificador;
-    //}
 
     public Character() {
         this.setName(rellenaConCaracteres((int) ((Math.random() * (25 - 1)) + 1)));
@@ -27,8 +16,6 @@ public abstract class Character {
 
         this.id += 1 ;
         System.out.println("Creado en constructor de Character con id: " + this.id);
-
-        //TODO: Some IDs here
     }
 
     public String dameType(){
@@ -49,10 +36,6 @@ public abstract class Character {
     public static long getId() {
         return id;
     }
-
-    //public static void setId(long id) {
-    //    Character.id = id;
-    //}
 
     public String getName() {
         return name;

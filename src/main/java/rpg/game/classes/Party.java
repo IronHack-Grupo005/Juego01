@@ -56,7 +56,7 @@ public class Party {
     public boolean getVivos(){
         for( Character e: this.characters){
             if(e.isAlive()){
-                System.out.println( "El id " + e.getIdentificador() + " es : " + e.getName()  );
+                System.out.println( "El id " + e.getId() + " es : " + e.getName()  );
 
             }
         }
@@ -67,7 +67,6 @@ public class Party {
         int id = 0 ;
         for( Character e: this.characters){
             if(e.isAlive()){
-                // TODO: He quitado identificador y hay que poner id
                 id = (int) e.getId();
                 return id;
 

@@ -62,12 +62,13 @@ public class Battle {
                 System.out.println( "El " + war.dameType() + " de quien va ha atacar: " + war.getName() );
                 System.out.println( "El " + mad.dameType() + " de quien va ser atacado: " + mad.getName() );
 
+                // TODO: Funcionara ??
                 war.attack( jugador2.dameCaracter( this.getFighterTWO()) );
 
             } else if (jugador1.dameCaracter(this.getFighterONE()).dameType() == "Wizard"){
                 Wizard wiz = (Wizard) jugador1.dameCaracter(this.getFighterONE());
                 Character mad = jugador1.dameCaracter(this.getFighterONE());
-                // TODO: mas lio con clases
+
                 System.out.println( "El " + wiz.dameType() + " de quien va ha atacar: " + wiz.getName() );
                 System.out.println( "El " + mad.dameType() + " de quien va ser atacado: " + mad.getName() );
 
