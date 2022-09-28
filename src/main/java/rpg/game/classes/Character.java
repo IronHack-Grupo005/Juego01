@@ -18,6 +18,15 @@ public abstract class Character {
         System.out.println("Creado en constructor de Character con id: " + this.id);
     }
 
+    /* Constructor por testing porpouses, con HP por default */
+    public Character(int hp) {
+        this.setName(rellenaConCaracteres((int) ((Math.random() * (25 - 1)) + 1)));
+        this.setHp(hp);
+        this.setAlive(true);
+
+        this.id += 1 ;
+        System.out.println("Creado en constructor de Character con id: " + this.id);
+    }
     public String dameType(){
         if(this instanceof Warrior)
             return "Warrior";
@@ -27,10 +36,13 @@ public abstract class Character {
             return "KO";
     }
 
-    public void hit(int d) {
+    public boolean hit(int d) {
         this.hp -= d;
-        if(this.getHp() <= 0)
+        if(this.getHp() <= 0) {
             this.setAlive(false);
+            return false;
+        }
+        return true;
     }
 
     public static long getId() {

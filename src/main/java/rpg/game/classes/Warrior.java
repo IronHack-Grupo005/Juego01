@@ -13,6 +13,12 @@ public class Warrior extends Character implements Attacker {
 
     }
 
+    public Warrior(int hp) {
+        super(hp);
+        this.setStamina((int) ((Math.random() * (50 - 10)) + 10));
+        this.setStrength((int) ((Math.random() * (10 - 1)) + 1));
+
+    }
     public int getStamina() {
         return stamina;
     }

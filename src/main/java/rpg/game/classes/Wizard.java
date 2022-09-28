@@ -13,6 +13,12 @@ public class Wizard extends Character implements Attacker {
         this.setIntelligence((int) ((Math.random() * (50 - 10)) + 10));
     }
 
+    public Wizard(int hp){
+        super(hp);
+        this.setMana((int) ((Math.random() * (50 - 10)) + 10));
+        this.setIntelligence((int) ((Math.random() * (50 - 10)) + 10));
+    }
+
     public int getMana() {
         return mana;
     }
