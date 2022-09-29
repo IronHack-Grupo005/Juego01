@@ -52,6 +52,8 @@ public class Battle {
 
             System.out.println("El ID del primer vivo es: " + jugador2.getFirstAlive());
 
+            // TODO: Get randon player
+
             this.setFighterTWO(jugador2.getFirstAlive() - 1);
 
             if (jugador1.dameCaracter(this.getFighterONE()).dameType() == "Warrior") {
@@ -69,8 +71,8 @@ public class Battle {
                 Wizard wiz = (Wizard) jugador1.dameCaracter(this.getFighterONE());
                 Character mad = jugador1.dameCaracter(this.getFighterONE());
 
-                System.out.println( "El " + wiz.dameType() + " de quien va ha atacar: " + wiz.getName() );
-                System.out.println( "El " + mad.dameType() + " de quien va ser atacado: " + mad.getName() );
+                System.out.println( "El " + wiz.dameType() + " que va ha atacar: " + wiz.getName() );
+                System.out.println( "El " + mad.dameType() + " que va a ser atacado: " + mad.getName() );
 
                 wiz.attack(jugador2.dameCaracter(this.getFighterTWO()));
            }

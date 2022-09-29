@@ -10,13 +10,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class TestMiguel {
-    Warrior war, war1;
+    Warrior war, war2;
     Wizard wiz;
 
     @BeforeEach
     void setUP (){
         war = new Warrior(20);
-        war1 = new Warrior(20);
+        war2 = new Warrior(20);
         wiz = new Wizard(20);
     }
 
@@ -25,7 +25,8 @@ public class TestMiguel {
     void testWarrior_Kill_OK(){
         assertEquals("Warrior", war.dameType());
         assertTrue(war.hit(10) );
-        assertFalse(war.hit(10));
+        assertTrue(war.hit(5));
+        assertFalse(war.hit(5));
     }
 
     @Test

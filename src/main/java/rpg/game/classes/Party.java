@@ -56,8 +56,11 @@ public class Party {
     public boolean getVivos(){
         for( Character e: this.characters){
             if(e.isAlive()){
-                System.out.println( "El id " + e.getId() + " es : " + e.getName()  );
-
+                if(e instanceof Warrior) {
+                    System.out.println("El id " + e.getId() + " es : " + e.getName() + " con vida de: " + e.getHp() + "con fuerza de: " + ((Warrior) e).getStrength() );
+                } else {
+                    System.out.println("El id " + e.getId() + " es : " + e.getName() + " con vida de: " + e.getHp() + "con inteligencia de: " + ((Wizard) e).getIntelligence() );
+                }
             }
         }
         return true;
