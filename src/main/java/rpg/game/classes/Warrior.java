@@ -5,11 +5,12 @@ public class Warrior extends Character implements Attacker {
 
     private int stamina;
     private int strength;
-
+    private static long idWarrior = 0;
     public Warrior() {
         super();
         this.setStamina((int) ((Math.random() * (50 - 10)) + 10));
         this.setStrength((int) ((Math.random() * (10 - 1)) + 1));
+        this.idWarrior += 1 ;
 
     }
 
@@ -17,8 +18,15 @@ public class Warrior extends Character implements Attacker {
         super(hp);
         this.setStamina((int) ((Math.random() * (50 - 10)) + 10));
         this.setStrength((int) ((Math.random() * (10 - 1)) + 1));
+        this.idWarrior += 1 ;
+        System.out.println("Creado en constructor de Warrior con id: " + this.idWarrior);
 
     }
+
+    public static long getIdWarrior() {
+        return idWarrior;
+    }
+
     public int getStamina() {
         return stamina;
     }
@@ -38,12 +46,11 @@ public class Warrior extends Character implements Attacker {
     public boolean attack(Character c) {
         this.setStamina(this.getStamina()-5);
         if (this.getStamina() >= 5) {
-            c.hit(this.getStrength()); // Heavy Attack
+            return c.hit(this.getStrength()); // Heavy Attack
         } else {
-            c.hit((int) (this.getStrength() / 2)); // Weak Attack
             this.setStamina(this.getStamina() + 1);
+            return c.hit((int) (this.getStrength() / 2)); // Weak Attack
         }
-        return true;
     }
 
 }

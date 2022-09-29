@@ -5,11 +5,11 @@ import rpg.game.classes.Character;
 import rpg.game.classes.Warrior;
 import rpg.game.classes.Wizard;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class TestMiguel {
-
-
     Warrior war, war1;
     Wizard wiz;
 
@@ -21,12 +21,20 @@ public class TestMiguel {
     }
 
     @Test
-    @DisplayName("Attack a player till die")
+    @DisplayName("Get attacked till die")
     void testWarrior_Kill_OK(){
         assertEquals("Warrior", war.dameType());
         assertTrue(war.hit(10) );
         assertFalse(war.hit(10));
     }
+
+    @Test
+    @DisplayName("Attack a player till die")
+    void testWarrior_Attack_OK () {
+        assertTrue(wiz.attack(war));
+        assertFalse(wiz.attack(war));
+    }
+
 /*
     @Test
     @DisplayName("Añadir un jugador a mas, debe lanzar excepcion")
