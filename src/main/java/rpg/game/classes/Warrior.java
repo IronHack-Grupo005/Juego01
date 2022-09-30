@@ -19,7 +19,7 @@ public class Warrior extends Character implements Attacker {
         this.setStamina((int) ((Math.random() * (50 - 10)) + 10));
         this.setStrength((int) ((Math.random() * (10 - 1)) + 1));
         this.idWarrior += 1 ;
-        System.out.println("Creado en constructor de Warrior con id: " + this.idWarrior);
+        //System.out.println("Creado en constructor de Warrior con id: " + this.idWarrior);
 
     }
 

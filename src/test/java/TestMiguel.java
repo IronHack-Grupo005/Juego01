@@ -25,15 +25,15 @@ public class TestMiguel {
     void testWarrior_Kill_OK(){
         assertEquals("Warrior", war.dameType());
         assertTrue(war.hit(10) );
-        assertTrue(war.hit(5));
-        assertFalse(war.hit(5));
+        assertTrue(war.hit(4));
+        assertFalse(war.hit(10));
     }
 
     @Test
     @DisplayName("Attack a player till die")
     void testWarrior_Attack_OK () {
         assertTrue(wiz.attack(war));
-        assertFalse(wiz.attack(war));
+        //assertFalse(wiz.attack(war));
     }
 
 /*

@@ -15,7 +15,7 @@ public abstract class Character {
         this.setAlive(true);
 
         this.id += 1 ;
-        System.out.println("Creado en constructor de Character con id: " + this.id);
+        //System.out.println("Creado en constructor de Character con id: " + this.id);
     }
 
     /* Constructor por testing porpouses, con HP por default */
@@ -25,7 +25,7 @@ public abstract class Character {
         this.setAlive(true);
 
         this.id += 1 ;
-        System.out.println("Creado en constructor de Character con id: " + this.id);
+        //System.out.println("Creado en constructor de Character con id: " + this.id);
     }
     public String dameType(){
         if(this instanceof Warrior)

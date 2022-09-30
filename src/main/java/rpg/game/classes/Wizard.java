@@ -19,7 +19,7 @@ public class Wizard extends Character implements Attacker {
         this.setMana((int) ((Math.random() * (50 - 10)) + 10));
         this.setIntelligence((int) ((Math.random() * (50 - 10)) + 10));
         this.idWizard += 1 ;
-        System.out.println("Creado en constructor de Wizard con id: " + this.idWizard);
+        //System.out.println("Creado en constructor de Wizard con id: " + this.idWizard);
     }
 
     public static long getIdWizard() {
